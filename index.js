@@ -1,7 +1,8 @@
-const express = require('express');
-const { WebSocketServer } = require('ws');
-const { createServer } = require('http');
-const { randomUUID } = require('crypto');
+   const express = require('express');
+   const { WebSocketServer } = require('ws');
+   const { createServer } = require('http');
+   const { randomUUID } = require('crypto');
+   const path = require('path');
 
 const app = express();
 const server = createServer(app);
@@ -10,10 +11,10 @@ const wss = new WebSocketServer({ server });
 // Serve static files
 app.use(express.static('public'));
 
-// Route for admin page
-app.get('/admin', (req, res) => {
-  res.sendFile(__dirname + '/public/admin.html');
-});
+ // Route for admin page
+   app.get('/admin', (req, res) => {
+     res.sendFile(path.join(__dirname, 'public', 'admin.html'));
+   });
 
 // Simple in-memory storage
 const rooms = new Map();
