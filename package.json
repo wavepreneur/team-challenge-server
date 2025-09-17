@@ -1,0 +1,22 @@
+{
+    "name": "team-challenge-server",
+    "version": "1.0.0",
+    "description": "WebSocket server for Team Challenge App",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/index.js",
+        "dev": "ts-node-dev --transpile-only index.ts"
+    },
+    "dependencies": {
+        "ws": "^8.18.0",
+        "uuid": "^9.0.1"
+    },
+    "devDependencies": {
+        "@types/node": "^20.14.2",
+        "@types/ws": "^8.5.10",
+        "@types/uuid": "^9.0.8",
+        "typescript": "^5.4.5",
+        "ts-node-dev": "^2.0.0"
+    }
+}
