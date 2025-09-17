@@ -1,55 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Challenge App</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
             background: #0a0a0a;
             color: #e5e5e5;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .link {
-            display: inline-block;
-            margin: 10px;
-            padding: 15px 30px;
-            background: #3b82f6;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-
-        .link:hover {
-            background: #2563eb;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>🏆 Team Challenge App</h1>
-        <p>Wähle eine Ansicht:</p>
-
-        <a href="/admin" class="link">👨‍💼 Admin Setup</a>
-        <a href="/arena/demo" class="link">🏟️ Arena Ansicht</a>
-        <a href="/beamer/demo" class="link">📺 Beamer Ansicht</a>
-        <a href="/highscore/demo" class="link">🏆 Highscore</a>
-
-        <p style="margin-top: 40px; color: #666;">
-            WebSocket Server läuft auf Port 10000
-        </p>
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-6xl font-bold mb-8">🏆 Team Challenge</h1>
+            <div class="space-y-4">
+                <a href="/admin"
+                    class="block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-xl">
+                    👨‍💼 Admin Setup
+                </a>
+                <a href="/arena/demo"
+                    class="block bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-lg text-xl">
+                    🏟️ Arena Ansicht
+                </a>
+                <a href="/beamer/demo"
+                    class="block bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-lg text-xl">
+                    📺 Beamer Ansicht
+                </a>
+                <a href="/highscore/demo"
+                    class="block bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-4 px-8 rounded-lg text-xl">
+                    🏆 Highscore
+                </a>
+            </div>
+            <p class="mt-8 text-gray-400">WebSocket Server läuft auf Port 4001</p>
+        </div>
     </div>
 </body>
 
